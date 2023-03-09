@@ -1,0 +1,57 @@
+.header {
+  @include flex();
+ 
+  height: 70px;
+  padding: $p-0-5;
+  margin: 0 auto;
+  color: $color-white;
+  
+
+  &-logo {
+      @include flex();
+      width:8vw;
+
+      &__lists {
+          @include flex();
+
+          &_image {
+              margin:$m-0-5;
+
+          }
+
+          &_title {
+              margin:$m-0-5;
+          }
+          &_title a {
+              color: $color-white;
+
+              &:hover {
+                  @include transition();
+
+                  color:$color-green;
+                  text-decoration: none;
+              }
+          }
+      }
+  }
+
+  &-nav {
+      
+      &__lists {
+          @include flex();
+
+          &_link {
+              margin: $m-2;
+          }
+          &_link a {
+              color:$color-white;
+          }
+          &_link a:hover {
+              @include transition();
+
+              color:$color-green;
+              text-decoration: none;
+          }
+      }
+  }
+}
